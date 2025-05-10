@@ -45,6 +45,13 @@ document.getElementById('toggle-video').addEventListener('click', () => {
     videoTrack.enabled = !videoTrack.enabled;
   }
 });
+// Toggle mic on/off
+document.getElementById('toggle-mic').addEventListener('click', () => {
+  const audioTrack = localStream.getAudioTracks()[0];
+  if (audioTrack) {
+    audioTrack.enabled = !audioTrack.enabled;
+  }
+});
 
 // End call
 document.getElementById('end-call').addEventListener('click', () => {
